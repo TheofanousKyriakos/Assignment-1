@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headmaster</title>
+    <link rel="icon" href="favicon.ico" />
+    <link href="css/headmaster.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="top">
+      <img
+        src="images/schoollogo2.jpg"
+        id="school"
+        width="200px"
+        height="100px"
+      />
+
+      <table class="password">
+        <tr>
+          <td>
+            <a class="button darkGrey rounded current" href="firstpage.html"
+              >Log Out</a
+            >
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <div class="sidehtml sidenav">
+        <a href="trainer.html" target="targetframe">Trainer</a><br />
+        <a href="student.html" target="targetframe">Student</a><br />
+        <a href="course.html" target="targetframe">Course</a><br />
+        <a href="assignment.html" target="targetframe">Assignment</a><br />
+        <a href="trainer_course.html" target="targetframe">Trainers per Curse</a
+        ><br />
+        <a href="student_course.html" target="targetframe">Students per Curse</a
+        ><br />
+        <a href="assignment_course.html" target="targetframe"
+          >Assignments per Curse</a
+        ><br />
+        <a href="ass_stud_course.html" target="targetframe"
+          >Assignments per Student per Course</a
+        ><br />
+      </div>
+      <div class="mainhtml" style="width: 90%">
+        <iframe
+          class="mainhtml"
+          src="trainer.html"
+          name="targetframe"
+          allowtransparency="true"
+          scrolling="yes"
+          frameborder="0"
+        >
+        </iframe>
+      </div>
+    </div>
+  </body>
+</html>

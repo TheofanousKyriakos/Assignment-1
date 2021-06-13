@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: yellow;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+table,
+th,
+tr,
+td {
+  text-align: center;
+  margin: auto;
+  position: relative;
+}
+
+.current {
+  border: 2px solid yellow !important;
+}
+.current2 {
+  color: white;
+}
+
+h1,
+h2 {
+  color: black;
+  padding: 25px 40px 25px;
+  font-family: monospace;
+  font-size: 40px;
+}
+h3,
+h6,
+p,
+.list2 {
+  color: black;
+  padding: 25px 50px 25px;
+  font-family: monospace;
+  font-size: 25px;
+}
+
+footer {
+  background-color: #000000;
+  height: 200px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  padding-top: 20px;
+  z-index: -1;
+}
+
+h4,
+h5 {
+  padding-top: 10px;
+}
+
+/*links to facebook instagram and more*/
+.contact {
+  color: white;
+  text-align: left;
+  position: sticky;
+  float: left;
+  width: 220px;
+  left: 60px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*brings you to each paragaph in firstpage html*/
+#p1 {
+  background-color: yellow;
+  padding-left: 17%;
+  padding-right: 5%;
+}
+#p2 {
+  background-color: yellowgreen;
+  padding-left: 17%;
+  padding-right: 5%;
+}
+#p3 {
+  background-color: yellow;
+  padding-left: 17%;
+  padding-right: 5%;
+}
+#p4 {
+  background-color: yellowgreen;
+  padding-left: 17%;
+  padding-right: 5%;
+}
+
+.up {
+  background-color: yellowgreen;
+}
+/*buttons at the top in first page and in programs page*/
+.pages {
+  position: absolute;
+  align-content: left;
+  top: 35px;
+  left: 200px;
+  width: 500px;
+}
+/*password to enter the assignment page*/
+.password {
+  position: absolute;
+  top: 35px;
+  right: 0;
+}
+
+/*top bar*/
+.top {
+  background-color: #000000;
+  border: 4px solid #fcf876;
+  height: 110px;
+}
+/*button to bring you to the top*/
+#top {
+  text-align: right;
+  background-color: red;
+  color: white;
+  font-size: largeer;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: fit-content;
+  width: 200px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  padding-top: 20px;
+  float: left;
+  border: 4px solid black;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a,
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover,
+.dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/*side nav in programs html*/
+.hide {
+  /* make sure to cover the screen */
+  min-height: 100vh;
+
+  /* need a solid bg to hide the footer */
+  background: black;
+
+  /* put on top */
+  position: relative;
+  z-index: 1;
+
+  font: 16px/1.4 system-ui, sans-serif;
+}
+
+/*background color to hide the footer*/
+
+.black {
+  background-color: black;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+img {
+  vertical-align: middle;
+}
+/* Hide the images by default*/
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*buttons top*/
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 25px;
+  transition: all 0.1s;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: 15px;
+  color: #111;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 1);
+  background-color: #ccc;
+  background-clip: padding-box;
+  border: 1px solid;
+  border-color: #202020 #1a1a1a #111;
+  border-radius: 2px;
+  background-image: -webkit-linear-gradient(top, #efefef, #777);
+  background-image: -moz-linear-gradient(top, #efefef, #777);
+  background-image: -o-linear-gradient(top, #efefef, #777);
+  background-image: linear-gradient(to bottom, #efefef, #777);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.09),
+    0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.09),
+    0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.rounded {
+  border-radius: 100em;
+}
+
+.darkGrey {
+  color: #bbb;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+  background-color: #474747;
+  border-color: #1c1c1c #202020 #222;
+  background-image: -webkit-linear-gradient(top, #2a2a2a, #1b1b1b);
+  background-image: -moz-linear-gradient(top, #2a2a2a, #1b1b1b);
+  background-image: -o-linear-gradient(top, #2a2a2a, #1b1b1b);
+  background-image: linear-gradient(to bottom, #2a2a2a, #1b1b1b);
+}
+.darkGrey:hover {
+  background-color: #363636;
+  background-image: -webkit-linear-gradient(top, #404040, #2a2a2a);
+  background-image: -moz-linear-gradient(top, #404040, #2a2a2a);
+  background-image: -o-linear-gradient(top, #404040, #2a2a2a);
+  background-image: linear-gradient(to bottom, #404040, #2a2a2a);
+}
+
+/*buttons down*/
+.bottombutton {
+  float: left;
+  margin-left: 100px;
+}
+
+.button1 {
+  position: sticky;
+  float: left;
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 10px 20px;
+  box-shadow: 0px 3px 1px black;
+}
+
+.cover1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 110px;
+  height: 40px;
+  -ms-transform: translateX(-120px);
+  -webkit-transform: translateX(-120px);
+  transform: translateX(-120px);
+  transition: all 0.5s ease-in-out;
+}
+
+/* .button background colors */
+
+#twitter {
+  background-color: rgba(85, 172, 238, 1);
+}
+
+#facebook {
+  background-color: rgb(66, 103, 178);
+}
+
+#google {
+  background-color: rgb(221, 75, 57);
+}
+
+#youtube {
+  background-color: rgb(179, 18, 23);
+}
+
+#instagram {
+  background-color: rgb(63, 114, 155);
+}
+
+#github {
+  background-color: rgb(153, 153, 153);
+}
+
+/* .cover background colors */
+
+.twitter {
+  background-color: rgb(35, 151, 234);
+}
+
+.facebook {
+  background-color: rgb(32, 70, 147);
+}
+
+.google {
+  background-color: rgb(219, 29, 8);
+}
+
+.youtube {
+  background-color: rgb(158, 6, 8);
+}
+
+.instagram {
+  background-color: rgb(43, 98, 140);
+}
+
+.github {
+  background-color: rgb(114, 107, 107);
+}
+
+.button1:hover .cover1 {
+  transform: translateX(0px);
+}
+
+.fa {
+  color: white;
+  margin-top: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*course*/
+
+.course {
+  padding: 0 20px;
+  background-color: black;
+  text-align: center;
+}
+
+/*brings you to each paragaph in programs html*/
+#c1 {
+  background-color: yellowgreen;
+  padding-left: 17%;
+  padding-right: 5%;
+}
+#c2 {
+  background-color: yellow;
+  padding-left: 17%;
+  padding-right: 5%;
+}
+#c3 {
+  background-color: yellowgreen;
+  padding-left: 17%;
+  padding-right: 5%;
+}
+#c4 {
+  background-color: yellow;
+  padding-left: 17%;
+  padding-right: 5%;
+}
+#c5 {
+  background-color: yellowgreen;
+  padding-left: 17%;
+  padding-right: 5%;
+}
+#c6 {
+  background-color: yellow;
+  padding-left: 17%;
+  padding-right: 5%;
+}
+
+/*for the Headmmaster page, about the html in the html page*/
+.sidehtml {
+  height: fit-content;
+  width: 15%;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  padding-top: 20px;
+  float: left;
+  border: 4px solid black;
+  float: left;
+}
+.mainhtml {
+  position: absolute;
+  right: 0;
+  width: 90%;
+  height: 100%;
+}

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Page</title>
+    <link rel="icon" href="favicon.ico" />
+    <link href="css/assignment.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="top">
+      <img
+        src="images/schoollogo2.jpg"
+        id="school"
+        width="200px"
+        height="100px"
+      />
+      <table width="15%" class="pages">
+        <tr>
+          <td>
+            <a class="button darkGrey rounded current" href="firstpage.html"
+              >Home</a
+            >
+          </td>
+          <td>
+            <a class="button darkGrey rounded" href="programs.html"
+              >Our Programs</a
+            >
+          </td>
+        </tr>
+      </table>
+      <table width="15%" class="password">
+        <tr>
+          <td>
+            <a class="button darkGrey rounded" href="password.html">Sign In</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="black">
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <img src="images/code5.png" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="images/code2.jpg" style="width: 100%" />
+        </div>
+        <div class="mySlides fade">
+          <img src="images/code3.jpg" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/code4.jpg" style="width: 100%" />
+        </div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <!-- The dots/circles -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+
+    <div class="hide">
+      <div class="sidenav">
+        <a href="#p1">What is a Coding Bootcamp?</a>
+
+        <button onclick="document.location='#p2'" class="dropdown-btn">
+          Types of Bootcamps: 4 Models
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a href="#p5">Full-Time, in Person Bootcamps</a>
+          <a href="#p6">Full-Time, Remote Bootcamps</a>
+          <a href="#p7">Self-Paced Online</a>
+          <a href="#p8">Part-Time, Career-Focused</a>
+        </div>
+        <a href="#p3">Am I ready for a coding bootcamp?</a>
+        <a href="#p4">What should I attend?</a>
+        <a href="#school" id="top">Top</a>
+      </div>
+
+      <div id="p1">
+        <h1>What is a Coding Bootcamp?</h1>
+        <p>
+          Coding bootcamps are intensive, accelerated learning programs that
+          teach beginners digital skills like Full-Stack Web Development, Data
+          Science, Digital Marketing, and UX/UI Design. Through project-based
+          learning, coding bootcamps get students job-ready for a career in tech
+          in about 12 weeks. There are more than 100 coding bootcamps in cities
+          across the US and Canada, and ~50 bootcamps internationally. The
+          average bootcamp costs ~$13,500, and graduates report an average
+          starting salary of $67,000. Since the first bootcamps opened their
+          doors in February 2012, this industry has grown throughout the US and
+          around the world. Bootcamps can vary in length from 6 to 28 weeks,
+          although the average bootcamp is ~14 weeks long.
+          <br />Coding bootcamps teach modern, widely used programming languages
+          and frameworks like Ruby on Rails, Python on Django, JavaScript, and
+          PHP stacks. They are also heavily project-based, and require students
+          to immediately put their learnings into practice. Students build fully
+          functional web-apps, do data analysis and use real dev tools just
+          weeks into their programs. In recent years, the bootcamp model has
+          extended to other digital skills like UX/UI Design, Data Science, and
+          Cybersecurity. <br />Bootcampers graduate from bootcamps with a
+          portfolio, an online presence, interview skills and more. Most
+          bootcamps help graduates find an internship or match students with an
+          employer network – in fact, in Course Report's most recent research,
+          83% of bootcamp alumni report being employed in programming jobs.
+        </p>
+      </div>
+      <div id="p2">
+        <h1>Types of Bootcamps: 4 Models</h1>
+        <p>
+          Coding bootcamps have different academic models than traditional
+          universities which allow them to serve the needs of a variety of
+          learners. There are 4 bootcamp models in the space: Full-Time
+          In-Person, Full-Time Remote, Self-Paced, Part-Time Career-Focused.
+          While the subjects taught are similar across models (typically web
+          development, mobile development, UX/UI design, data science, and
+          project management), the time commitment, outcomes expectations, depth
+          and delivery of curricula vary based on model.
+        </p>
+
+        <h3 id="p5">FULL-TIME, IN-PERSON BOOTCAMPS</h3>
+        <p>
+          These are the schools that we typically think about when talking about
+          “coding bootcamps.” Immersive, full-time, in-person – students attend
+          class for 40-80 hours each week in a classroom. Immersive bootcamps
+          usually last 2 months to 7 months. Classes are held full-time and
+          students can use facilities after class to review concepts and work on
+          projects. Many intensive bootcamp students put in 80 hour weeks. To
+          attend an intensive bootcamp, students must be prepared to give up
+          their full-time job and limit outside activities for the course of the
+          program. The Flatiron School Software Engineering Immersive, Turing
+          School's Back-End Engineering Bootcamp, and Codesmith's Software
+          Engineering Immersive are examples of this model.
+        </p>
+        <h3 id="p6">FULL-TIME, REMOTE BOOTCAMPS</h3>
+        <p>
+          Online Coding Bootcamps almost mimic the classroom experience – these
+          are full-time bootcamps that require 40-60 hours per week (this is no
+          MOOC)! Typically, online bootcamps will either use pre-existing tools
+          like Zoom Pro and build communities on Slack. Schools like Hack
+          Reactor Remote, Thinkful's Engineering Immersion, and Lambda School's
+          Full Stack Web Immersive are immersive, instructor-led bootcamps. Like
+          their in-person counterparts, online bootcamps teach UX design, data
+          science, and software development, have outcomes-oriented curricula
+          that include one-on-one instructor/mentor guidance, interaction with
+          classmates, and targeted career coaching.
+        </p>
+        <h3 id="p7">SELF-PACED ONLINE</h3>
+        <p>
+          Self-Paced Online Bootcamps require less of a time commitment each
+          week (~10-20 hours) but take longer to complete. Typically, students
+          complete curriculum and projects on their own schedule and meet with a
+          mentor several times each week. Most online schools also have an
+          online community where students can connect with each other. One plus?
+          You can enjoy the benefits of bootcamp from the comfort of your own
+          home and don't need to quit your job to upskill. Thinkful's
+          Engineering Flex and Springboard's Software Engineering Career Track
+          are great examples of the self-paced online bootcamp.
+        </p>
+        <h3 id="p8">PART-TIME, CAREER-FOCUSED</h3>
+        <p>
+          Part-time coding bootcamps usually meet on nights and weekends.
+          Students study programming over a longer period of time (~6-9 months)
+          and spend 6-15 hours per week in class and another 10-15 hours per
+          week on outside work. Students in part-time bootcamps usually hold
+          part-time or full-time jobs in addition to class. The goal for a
+          part-time bootcamper is typically to land a new job or get a promotion
+          at work, but some part-time students' goals are to simply add new
+          tools to their resume. For example, a Product Manager may take a
+          part-time coding bootcamp to become more fluent with developers at
+          work. Examples of quality part-time bootcamps are Actualize's Nights
+          and Weekends Course or DevMountain's After Hours User Experience
+          Design Course.
+        </p>
+      </div>
+      <div id="p3">
+        <h1>Am I ready for a coding bootcamp?</h1>
+        <p>
+          Coding Bootcamps are intensive programs; while very rewarding, a
+          coding bootcamp will be stressful and will push you. Before attending
+          a bootcamp, consider if it’s the right fit for your learning style.
+          Schools look for the following skills in intensive bootcamp
+          applicants:
+        </p>
+        <ul class="list2">
+          <li>
+            Willingness to work hard – this is particularly important when
+            applying to an intensive bootcamp. It’s a huge investment to spend
+            40-80+ hours a week over the course of several months to learn a new
+            skill. You'll often hear the word grit throughout the admissions
+            process, and that's exactly what schools are looking for in
+            applicants. Bootcamps want to know that their students are committed
+            to doing whatever it takes to succeed for the duration of the
+            bootcamp. At the same time, make sure you avoid burnout.
+          </li>
+          <li>
+            Ability to problem solve – An intense curiosity and desire to
+            problem-solve are vital, because many bootcamps offer limited
+            lectures and instead require students to spend most of the day
+            solving challenges on their own. During the technical coding
+            challenge, your approach to problem-solving can be even more
+            important than solving the challenge.
+          </li>
+          <li>
+            Interpersonal skills – Whether it’s called empathy or just “playing
+            nice,” a bootcamp is a team sport. You’ll be spending the majority
+            of your days learning alongside and coding with a small group of
+            strangers. Those that demonstrate a desire to learn from and work
+            with others will do well.
+          </li>
+          <li>
+            Technical chops – Depending on the school. you may be required to
+            pass a coding challenge in your interview. If you're not quite
+            ready, take a coding bootcamp prep program.
+          </li>
+        </ul>
+      </div>
+      <div id="p4">
+        <h1>What type of bootcamp should I attend?</h1>
+        <p>
+          Acceptance rates at top coding bootcamps are notoriously low (some
+          between 3-6%), but that doesn't mean that you're not ready to learn to
+          code. Coding Bootcamps are generally upfront about the minimum demands
+          they make on their students. Some "zero to sixty" code schools are
+          meant to bring beginners into the fold and other "twenty to
+          one-twenty" bootcamps aim to help current developers make a leap or
+          learn a new technology stack. First, figure out what your own skill
+          level is, and then find the bootcamp that aligns with that level.
+        </p>
+        <p>
+          Immersive coding bootcamps – Immersive bootcamps usually last 2 months
+          to 7 months. Classes are held full-time and students can use
+          facilities after class to review concepts and work on projects. Many
+          intensive bootcamp students put in 80 hour weeks. To attend an
+          intensive bootcamp, students must be prepared to give up their
+          full-time job and limit outside activities for the course of the
+          program.
+        </p>
+        <p>
+          Part-time coding bootcamps – Part-time coding bootcamps usually meet
+          on nights and weekends. Students study concepts over a longer period
+          of time and spend 6-15 hours per week in class and another 10-15 hours
+          per week on additional concepts. Students in part-time bootcamps
+          usually hold part-time or full-time jobs in addition to class.
+        </p>
+        <p>
+          Online coding bootcamps – More recently, the bootcamp trend has
+          shifted thanks to online coding schools like Bloc, Thinkful, and other
+          popular programs. Even if you choose to study online, you'll still
+          have options between flexible or full-time courses. Students complete
+          curriculum and activities on their own and meet with a mentor several
+          times each week. Most online schools also have an online community
+          where students can connect with each other. One plus? You can enjoy
+          the benefits of bootcamp from the comfort of your own home. Watch
+          demos of online coding bootcamps here.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="contact">
+        <h4>Contact</h4>
+        <h5>Email: info@thecodingschool.com</h5>
+
+        <h5>Telephone: +30 123456789</h5>
+
+        <h5>Adress: Simroad 66, 6th Floor, PostCode 123456, Simcity</h5>
+      </div>
+      <div class="bottombutton">
+        <a href="https://twitter.com/login?lang=el"
+          ><div id="twitter" class="button1">
+            Twitter
+            <div class="cover1 twitter">
+              <li class="fa fa-twitter fa-2x"></li>
+            </div></div
+        ></a>
+
+        <a href="https://www.facebook.com/"
+          ><div id="facebook" class="button1">
+            Facebook
+            <div class="cover1 facebook">
+              <li class="fa fa-facebook fa-2x"></li>
+            </div></div
+        ></a>
+
+        <a href="https://www.google.com/"
+          ><div id="google" class="button1">
+            Google+
+            <div class="cover1 google">
+              <li class="fa fa-google-plus fa-2x"></li>
+            </div></div
+        ></a>
+
+        <a href="https://www.youtube.com/?hl=el"
+          ><div id="youtube" class="button1">
+            Youtube
+            <div class="cover1 youtube">
+              <li class="fa fa-youtube fa-2x"></li>
+            </div></div
+        ></a>
+
+        <a href="https://www.instagram.com/"
+          ><div id="instagram" class="button1">
+            Instagram
+            <div class="cover1 instagram">
+              <li class="fa fa-instagram fa-2x"></li>
+            </div></div
+        ></a>
+
+        <a href="https://github.com/"
+          ><div id="github" class="button1">
+            Github
+            <div class="cover1 github">
+              <li class="fa fa-github fa-2x"></li>
+            </div></div
+        ></a>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/assignment.js"></script>
+  </body>
+</html>

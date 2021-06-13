@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Assignment/Course</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <!-- Form Section -->
+      <div class="row form-row">
+        <div class="col-lg-4 form-type">
+          <h2 class="h2-class">Assignment/Course</h2>
+          <form onsubmit="event.preventDefault();onSubmit()" autocomplete="off">
+            <div class="form-group">
+              <label for="titleAssignment">Assignment*</label>
+              <select
+                name="aTitle"
+                id="titleAssignment"
+                class="form-control"
+                placeholder="Input Title"
+                style="margin-bottom: 15px"
+                minlength="2"
+                maxlength="35"
+                required
+              >
+                
+                  <option value="" disabled selected>
+                    --Please choose an Assignment--
+                  </option>
+                  <option>First Individual Project</option>
+                  <option>First Group Assignment</option>
+                  <option>Second Individual Project</option>
+                  <option>Second Group Assignment</option>
+                
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="descriptionAssignment">Description*</label>
+              <select
+                name="aDescription"
+                id="descriptionAssignment"
+                class="form-control"
+                placeholder="Input Title"
+                style="margin-bottom: 15px"
+                minlength="2"
+                maxlength="35"
+                required
+              >
+                
+                  <option value="" disabled selected>
+                    --Please choose an Assignment--
+                  </option>
+                  <option>Private School</option>
+                  <option>Create Web Site</option>
+                  <option>Connect to Database</option>
+                  <option>Artificial Intelligence</option>
+                
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="subDate">Sub Date*</label>
+              <input
+                type="date"
+                class="form-control"
+                id="subDate"
+                name="aSubDate"
+                placeholder="Input Sub Date"
+                min="2020-01-12"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="oralMark">Oral Mark</label>
+              <input
+                type="number"
+                class="form-control"
+                id="oralMark"
+                name="aOralMark"
+                placeholder="Input Oral Mark"
+                min="0"
+                max="20"
+              />
+            </div>
+            <div class="form-group">
+              <label for="totalMark">Total Mark</label>
+              <input
+                type="number"
+                class="form-control"
+                id="totalMark"
+                name="aTotalMark"
+                placeholder="Input Total Mark"
+                min="0"
+                max="80"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formTitleCourse">Subject*</label>
+              <select
+                name="cTitle"
+                id="formTitleCourse"
+                class="form-control"
+                style="margin-bottom: 15px"
+                required
+              >
+                
+                  <option value="" disabled selected>
+                    --Please choose a Course--
+                  </option>
+                  <option>JavaScript</option>
+                  <option>C#</option>
+                  <option>C++</option>
+                  <option>Java</option>
+                  <option>Python</option>
+                
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="formStreamCourse">Stream*</label>
+              <select
+                name="cStream"
+                id="formStreamCourse"
+                class="form-control"
+                style="margin-bottom: 15px"
+                required
+              >
+                
+                  <option value="" disabled selected>
+                    --Please choose a Class--
+                  </option>
+                  <option>Junior Class</option>
+                  <option>Advanced Class</option>
+                
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="formTypeCourse">Type*</label>
+              <select
+                name="cType"
+                id="formTypeCourse"
+                class="form-control"
+                style="margin-bottom: 15px"
+                required
+              >
+                
+                  <option value="" disabled selected>
+                    --Please choose a Type--
+                  </option>
+                  <option>Full Time</option>
+                  <option>Part Time</option>
+                  <option>Online</option>
+                
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="formStartDateCourse">Start Date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="formStartDateCourse"
+                name="cStartDate"
+                placeholder="Input Start Date"
+                min="2019-01-01"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formEndDateCourse">End Date</label>
+              <input
+                type="date"
+                class="form-control"
+                id="formEndDateCourse"
+                name="cEndDate"
+                placeholder="Input End Date"
+                min="2019-01-03"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+
+        <!-- Table Section -->
+        <div class="col-lg-8 form-table">
+          <h2 class="h2-class">Assignment/Course Inputs</h2>
+          <table class="table table-striped" id="assignmentcourse-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Assignment</th>
+                <th scope="col">Description</th>
+                <th scope="col">Sub Date</th>
+                <th scope="col">Oral Mark</th>
+                <th scope="col">Total Mark</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Stream</th>
+                <th scope="col">Type</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Edit</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal-Message -->
+    <div
+      class="modal fade bd-example-modal-sm"
+      id="memberModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mySmallModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">Now You Can Edit Your Input</div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/assignment.js"></script>
+  </body>
+  <script>
+    var selectedRow = null;
+
+    function onSubmit() {
+      let formData = readFromData();
+      if (selectedRow === null) insertNewRecord(formData);
+      else updateRecord(formData);
+      resetForm();
+    }
+    var number = 0;
+    function readFromData() {
+      var formData = {};
+      formData["number"] = ++number;
+      formData["assignment"] = $("#titleAssignment").val();
+      formData["description"] = $("#descriptionAssignment").val();
+      formData["subDate"] = $("#subDate").val();
+      formData["oralMark"] = $("#oralMark").val();
+      formData["totalMark"] = $("#totalMark").val();
+      formData["course"] = $("#formTitleCourse").val();
+      formData["stream"] = $("#formStreamCourse").val();
+      formData["type"] = $("#formTypeCourse").val();
+      formData["startDate"] = $("#formStartDateCourse").val();
+      formData["endDate"] = $("#formEndDateCourse").val();
+      return formData;
+    }
+
+    function insertNewRecord(data) {
+      let table = document
+        .getElementById("assignmentcourse-table")
+        .getElementsByTagName("tbody")[0];
+      let newRow = table.insertRow(table.length);
+      cell1 = newRow.insertCell(0);
+      cell1.innerHTML = data.number;
+      cell2 = newRow.insertCell(1);
+      cell2.innerHTML = data.assignment;
+      cell3 = newRow.insertCell(2);
+      cell3.innerHTML = data.description;
+      cell4 = newRow.insertCell(3);
+      cell4.innerHTML = data.subDate;
+      cell5 = newRow.insertCell(4);
+      cell5.innerHTML = data.oralMark;
+      cell6 = newRow.insertCell(5);
+      cell6.innerHTML = data.totalMark;
+      cell7 = newRow.insertCell(6);
+      cell7.innerHTML = data.course;
+      cell8 = newRow.insertCell(7);
+      cell8.innerHTML = data.stream;
+      cell9 = newRow.insertCell(8);
+      cell9.innerHTML = data.type;
+      cell10 = newRow.insertCell(9);
+      cell10.innerHTML = data.startDate;
+      cell11 = newRow.insertCell(10);
+      cell11.innerHTML = data.endDate;
+      cell12 = newRow.insertCell(11);
+      cell12.innerHTML =
+        '<button type="button" class="btn btn-primary" onClick="onEdit(this)">Edit</button>';
+    }
+
+    function resetForm() {
+      $("#titleAssignment").val("");
+      $("#descriptionAssignment").val("");
+      $("#subDate").val("");
+      $("#oralMark").val("");
+      $("#totalMark").val("");
+      $("#formTitleCourse").val("");
+      $("#formStreamCourse").val("");
+      $("#formTypeCourse").val("");
+      $("#formStartDateCourse").val("");
+      $("#formEndDateCourse").val("");
+      selectedRow = null;
+    }
+
+    function onEdit(td) {
+      selectedRow = td.parentElement.parentElement;
+      $("#titleAssignment").val(selectedRow.cells[1].innerHTML);
+      $("#descriptionAssignment").val(selectedRow.cells[2].innerHTML);
+      $("#subDate").val(selectedRow.cells[3].innerHTML);
+      $("#oralMark").val(selectedRow.cells[4].innerHTML);
+      $("#totalMark").val(selectedRow.cells[5].innerHTML);
+      $("#formTitleCourse").val(selectedRow.cells[6].innerHTML);
+      $("#formStreamCourse").val(selectedRow.cells[7].innerHTML);
+      $("#formTypeCourse").val(selectedRow.cells[8].innerHTML);
+      $("#formStartDateCourse").val(selectedRow.cells[9].innerHTML);
+      $("#formEndDateCourse").val(selectedRow.cells[10].innerHTML);
+
+      // Change title and button color
+      $("#submitbtn")
+        .text("Update")
+        .removeClass("btn-primary")
+        .addClass("btn-outline-primary");
+
+      message();
+    }
+
+    function updateRecord(formData) {
+      selectedRow.cells[1].innerHTML = formData.assignment;
+      selectedRow.cells[2].innerHTML = formData.description;
+      selectedRow.cells[3].innerHTML = formData.subDate;
+      selectedRow.cells[4].innerHTML = formData.oralMark;
+      selectedRow.cells[5].innerHTML = formData.totalMark;
+      selectedRow.cells[6].innerHTML = formData.course;
+      selectedRow.cells[7].innerHTML = formData.stream;
+      selectedRow.cells[8].innerHTML = formData.type;
+      selectedRow.cells[9].innerHTML = formData.startDate;
+      selectedRow.cells[10].innerHTML = formData.endDate;
+      --number;
+      // Change title and button color
+      $("#submitbtn")
+        .text("Submit")
+        .removeClass("btn-outline-primary")
+        .addClass("btn-primary");
+    }
+
+    //Modal show and auto hide
+    function message() {
+      $("#memberModal").modal("show");
+      setTimeout(function () {
+        $("#memberModal").modal("hide");
+      }, 1800);
+    }
+
+    //Ckeck course date
+    function checkDate() {
+      let startDate = $("#formStartDateCourse").val();
+      let endDate = $("#formEndDateCourse").val();
+      let varDate = new Date(startDate);
+      let today = new Date(endDate);
+      return varDate >= today;
+    }
+  </script>
+</html>
